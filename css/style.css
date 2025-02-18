@@ -19,11 +19,19 @@ img{display: block;}
 button {cursor: pointer;}
 
 
-.list{ list-style: none;
+ul {list-style: none;
 padding: 0;
 margin: 0;}
 
-.link {text-decoration: none;}
+a {text-decoration: none;}
+
+.container {
+width: 1158px;
+padding: 0 15px;
+margin: 0 auto;}
+
+.section {padding-top: 120px;
+padding-bottom: 120px;}
 
 
 :root {--primary-brand:#4D5AE5;
@@ -32,19 +40,15 @@ margin: 0;}
 --text-color:#434455;
 --background-color:#2e2f42;}
 
-.section{padding-top: 120px;
-padding-bottom: 120px;}
 
-.container{width: 1158px;
-padding: 0 15px;
-margin: 0 auto;}
+
+
 
 /* HEADER */
 
-.page-header{border-bottom: 1px solid #e7e9fc;}
-
 
 /* LOGO */
+
 
 .logo{font-family: "Raleway",sans-serif;
 font-weight: 700;
@@ -78,6 +82,17 @@ color: inherit;}
 .item-nav .link:hover,
 .item-nav .link:focus{color: var(--active-ocean);}
 
+.item-nav .active {color: var(--active-ocean);}
+
+.item-nav .active::after{display: block;
+content: "";
+border-radius: 2px;
+width: 48px;
+height: 4px;
+background-color: var(--active-ocean);}
+
+
+
 
 /* ADDRESS */
 
@@ -103,7 +118,15 @@ gap: 40px;}
 /* SECTION HERO */
 
 .section-hero{background-color:var(--background-color);
-padding: 188px 0px;}
+background-image:linear-gradient(rgba(46, 47, 66, 0.7),
+rgba(46, 47, 66, 0.7)),
+url('../image/people-office.jpg');
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+padding: 188px 0px;
+width: 1440px;
+margin: 0 auto;}
 
 .title-hero{
 font-size: 56px;
@@ -169,7 +192,7 @@ font-weight:400;}
 /* OUR TEAM */
 
 
-.section-team{background-color:#f4f4fd;;}
+.section-team{background-color:#f4f4fd;}
 
 .list-team{display: flex;
 gap: 24px;}
@@ -183,6 +206,18 @@ border-radius: 0px 0px 4px 4px;}
 .title-name{text-align: center;}
 
 .text-name{text-align: center;}
+
+.list-social{display: flex;
+}
+
+.link-social{align-items: center;
+  justify-content: center;
+ width: 40px;
+ height: 40px;
+ border-radius: 50%;
+  gap: 24px;
+}
+
 
 
 .title-first{font-size: 36px;
